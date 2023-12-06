@@ -3,7 +3,7 @@ on: [push, workflow_dispatch]
 
 env:
     IMAGE: flask-demo
-    app-name: sbarakat-flask-demo
+    app_name: sbarakat-webapp
 
 jobs:
   build-and-deploy:
@@ -37,7 +37,7 @@ jobs:
 
     - uses: azure/webapps-deploy@v2
       with:
-        app-name: ${{ env.app-name }}
+        app-name: ${{ env.app_name }}
         images: '${{vars.DOCKER_REGISTRY_SERVER_URL}}/${{env.IMAGE_NAME}}:latest'
 
         
