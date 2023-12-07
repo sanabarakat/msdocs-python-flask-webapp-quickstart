@@ -3,7 +3,7 @@ on: [push, workflow_dispatch]
 
 env:
     IMAGE: flask-demo
-    app_name: sbarakat-webapp
+    app_name: sanabar-webapp
 
 jobs:
   build-and-deploy:
